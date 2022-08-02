@@ -6,20 +6,20 @@ function ex2(input) {
     tables: {
       [parsedInput.tableName]: {
         columns: columnsObject(parsedInput.columns),
-        data: []
-      }
-    }
+        data: [],
+      },
+    },
   };
   return database;
-};
+}
 
 function columnsObject(parsedColumns) {
   const columns = {};
   for (let column of parsedColumns) {
-    let parsedColumn = column.split(' ');
+    let parsedColumn = column.split(" ");
     columns[parsedColumn[0]] = parsedColumn[1];
-  };
+  }
   return columns;
-};
+}
 
 module.exports = ex2;
